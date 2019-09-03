@@ -1,13 +1,20 @@
 
 version: 2.1
+workflows:
+  main:
+    jobs:
+      - build
 jobs:
   build:
     docker:
-      - image: alpine:3.7
+      - image: alpine:3.10
     steps:
       - checkout
       - run:
-          name: build
+          name: configure
           command: |
             cmake --configure .
+      - run:
+          name: build
+          command: |
             cmake --build .

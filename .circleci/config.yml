@@ -5,8 +5,9 @@ jobs:
     docker:
       - image: alpine:3.7
     steps:
+      - checkout
       - run:
-          name: The First Step
+          name: build
           command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
+            cmake --configure .
+            cmake --build .

@@ -7,7 +7,7 @@ workflows:
 jobs:
   build:
     docker:
-      - image: urnm1/cxx-dev-env:3.10
+      - image: urnm1/cxx-dev-env:latest
     steps:
       - checkout
       - run:

@@ -1,0 +1,5 @@
+add_executable(p1 main.cpp)
+set(dnm "AA BB")
+set(dnm2 AA BB)
+message(STATUS ${dnm})
+message(STATUS ${dnm2})

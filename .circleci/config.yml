@@ -13,7 +13,7 @@ jobs:
       - run:
           name: configure
           command: |
-            cmake --configure .
+            cmake --configure -G Ninja .
       - run:
           name: build
           command: |

@@ -22,3 +22,8 @@ jobs:
           name: test
           command: |
             ctest .
+      - run:
+          name: coverage
+          command: |
+            gcov -n -o *
+            bash <(curl -s https://codecov.io/bash)

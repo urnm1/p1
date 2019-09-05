@@ -1,5 +1,4 @@
-find_package(Catch2 REQUIRED)
 add_executable(main "main.cpp")
-target_link_libraries(main Catch2::Catch2)
-include(Catch)
+target_include_directories(main external)
+include(external/Catch)
 catch_discover_tests(main)

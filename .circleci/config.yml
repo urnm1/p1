@@ -25,5 +25,5 @@ jobs:
       - run:
           name: coverage
           command: |
-            gcov -n -o ${find -type f -name '*.cpp'}
+            gcov -n -o $(find -type f -name '*.cpp')
             bash <(curl -s https://codecov.io/bash)
